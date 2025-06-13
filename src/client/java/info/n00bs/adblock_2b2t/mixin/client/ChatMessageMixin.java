@@ -65,6 +65,10 @@ public class ChatMessageMixin {
                 // Replace the original message with our debug message
                 ((ChatHud)(Object)this).addMessage(debugMessage, null, null);
             }
+            System.out.println("[AdBlock] Message blocked: \n" +
+                    messageString + "\n" +
+                    "Filter: " + MessageFilter.getInstance().getMatchingFilterType(messageString) + "\n" +
+                    "Pattern: " + MessageFilter.getInstance().getMatchingPattern(messageString) );
 
             // Cancel the event to prevent the original message from being displayed
             ci.cancel();
