@@ -9,6 +9,7 @@
     "homepage": "https://github.com/ItzN00bPvP/adblock_2b2t",
     "issues": "https://github.com/ItzN00bPvP/adblock_2b2t/issues"
   },
+  "icon": "assets/adblock_2b2t/icon.png",
   "license": "All-Rights-Reserved",
   "environment": "client",
   "entrypoints": {
