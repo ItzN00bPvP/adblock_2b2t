@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "adblock_2b2t",
-  "version": "0.1",
+  "version": "${version}",
   "name": "2b2t AdBlock",
   "description": "Filters chat messages on the 2b2t Minecraft server to block advertisements and spam. Supports both remote and local filter lists.",
   "authors": ["Philipp_DE"],
