@@ -17,6 +17,9 @@
     ],
     "main": [
       "info.n00bs.adblock_2b2t.Adblock_2b2t"
+    ],
+    "modmenu": [
+      "info.n00bs.adblock_2b2t.client.ModMenuIntegration"
     ]
   },
   "mixins": [
@@ -29,6 +32,10 @@
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "${minecraft_version}",
+    "yet_another_config_lib_v3": ">=3.6.2"
+  },
+  "recommends": {
+    "modmenu": "*"
   }
 }
