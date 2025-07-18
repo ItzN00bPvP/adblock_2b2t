@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "adblock_2b2t",
-  "version": "0.1",
+  "version": "${version}",
   "name": "2b2t AdBlock",
   "description": "Filters chat messages on the 2b2t Minecraft server to block advertisements and spam. Supports both remote and local filter lists.",
   "authors": ["Philipp_DE"],
@@ -9,6 +9,7 @@
     "homepage": "https://github.com/ItzN00bPvP/adblock_2b2t",
     "issues": "https://github.com/ItzN00bPvP/adblock_2b2t/issues"
   },
+  "icon": "assets/adblock_2b2t/icon.png",
   "license": "All-Rights-Reserved",
   "environment": "client",
   "entrypoints": {
@@ -17,6 +18,9 @@
     ],
     "main": [
       "info.n00bs.adblock_2b2t.Adblock_2b2t"
+    ],
+    "modmenu": [
+      "info.n00bs.adblock_2b2t.client.ModMenuIntegration"
     ]
   },
   "mixins": [
@@ -29,6 +33,10 @@
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "${minecraft_version}",
+    "yet_another_config_lib_v3": ">=3.6.2"
+  },
+  "recommends": {
+    "modmenu": "*"
   }
 }
