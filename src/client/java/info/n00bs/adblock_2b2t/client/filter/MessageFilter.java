@@ -15,11 +15,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -29,9 +25,9 @@ import java.util.stream.Collectors;
 public class MessageFilter {
     private static final MessageFilter INSTANCE = new MessageFilter();
 
-    private List<Pattern> remotePatterns = new ArrayList<>();
-    private List<Pattern> customPatterns = new ArrayList<>();
-    private boolean isInitialized = false;
+    private final List<Pattern> remotePatterns = new CopyOnWriteArrayList<>();
+    private final List<Pattern> customPatterns = new CopyOnWriteArrayList<>();
+    private volatile boolean isInitialized = false;
 
     // Scheduler for auto-refresh
     private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
